@@ -53,40 +53,68 @@
       color: green;
       font-weight: bold;
     }
+
+    section {
+      padding: 40px 20px;
+      background-color: #fff;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🔸 Navigation menu -->
+  <!--  Navigation menu -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="container">
+  <!--  Home Section -->
+  <section id="home">
     <h1>Welcome to Karishma's Shop</h1>
+    <p>Shop your favorite products at best prices!</p>
+  </section>
 
-   <div class="product">
- <img src="shirt.webp" alt="shirt">
-  <h3>Stylish Shirt</h3>
-  <p>Rs. 1000</p>
-</div>
+  <!-- 🔹 Products Section -->
+  <section id="products" class="container">
+    <h2>Our Products</h2>
 
-<div class="product">
-  <img src="shoes.jpg" alt="shoes">
-  <h3>Running Shoes</h3>
-  <p>Rs. 2500</p>
-</div>
+    <div class="product">
+      <img src="shirt.webp" alt="Shirt">
+      <h3>Stylish Shirt</h3>
+      <p>Rs. 1000</p>
+    </div>
 
-<div class="product">
-  <img src="watch.jpg" alt="watch">
-  <h3>Digital Watch</h3>
-  <p>Rs. 1800</p>
-</div>
+    <div class="product">
+      <img src="shoes.jpg" alt="Shoes">
+      <h3>Running Shoes</h3>
+      <p>Rs. 2500</p>
+    </div>
 
-  </div>
+    <div class="product">
+      <img src="watch.jpg" alt="Watch">
+      <h3>Digital Watch</h3>
+      <p>Rs. 1800</p>
+    </div>
+  </section>
+
+  <!--  About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Karishma's Shop is an online store offering quality fashion and accessories at affordable prices. We aim to provide the best shopping experience for you!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@karishmashop.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <p>Location: Umerkot, Sindh, Pakistan</p>
+  </section>
 
 </body>
 </html>
