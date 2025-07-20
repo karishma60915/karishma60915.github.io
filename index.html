@@ -63,16 +63,24 @@
     }
 
     .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
+  width: 200px;     /* ya jitni choti chahiye */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* optional for rounded corners */
+}
+
 
     .product:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease-in-out;
     }
+    @media (max-width: 600px) {
+  .product img {
+    width: 100%;
+  }
+}
+
 
     .discount {
       background-color: red;
