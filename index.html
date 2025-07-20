@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Karishma's Shop</title>
+  <title>Karishma's Shop - Home</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
     }
 
     nav {
-      background-color: #333;
+      background-color: #111;
       color: white;
       padding: 15px;
       text-align: center;
@@ -22,22 +23,43 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
-      cursor: pointer;
     }
 
-    .section {
-      padding: 30px;
+    nav input[type="text"] {
+      padding: 5px;
+      border-radius: 5px;
+      margin-left: 15px;
+    }
+
+    .hero {
       text-align: center;
+      padding: 40px;
+      background-color: #fff;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
     }
 
     .product {
-      display: inline-block;
-      margin: 20px;
+      background-color: #fff;
+      margin: 15px;
       padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 200px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
     }
 
     .product img {
@@ -46,21 +68,163 @@
       border-radius: 5px;
     }
 
-    .product h3 {
-      margin: 10px 0;
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
     }
 
-    .product p {
-      color: green;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #333;
+    .discount {
+      background-color: red;
       color: white;
+      padding: 5px;
+      font-size: 12px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 5px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #ffe6f0, #fff5f8);
+  padding: 50px;
+  margin: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.about:hover {
+  transform: scale(1.02);
+}
+
+.about img {
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1;
+  padding-left: 30px;
+  max-width: 600px;
+}
+
+.about-text h1 {
+  color: #d63384;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.about-text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+    .contact-section {
+  background: linear-gradient(to right, #fef6f9, #ffe0ec);
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #d81b60;
+}
+
+
+    .testimonials {
+      background-color: #f3f3f3;
+      padding: 30px;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      border-radius: 10px;
+      margin: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .product-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product {
+        width: 90%;
+      }
+
+      nav {
+        font-size: 14px;
+      }
+
+      .contact form input,
+      .contact form textarea {
+        width: 100%;
+      }
+
+      nav input[type="text"] {
+        display: block;
+        margin: 10px auto 0;
+      }
     }
   </style>
 </head>
@@ -68,65 +232,207 @@
 
   <!-- Navigation -->
   <nav>
-    <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('products')">Products</a>
-    <a onclick="showSection('about')">About</a>
-    <a onclick="showSection('contact')">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <input type="text" placeholder="Search products...">
   </nav>
 
-  <!-- Home Section -->
-  <div class="section" id="home">
+  <!-- Hero Section -->
+  <header class="hero">
     <h1>Welcome to Karishma's Shop</h1>
-    <p>We sell quality fashion products with love 💖</p>
-  </div>
+    <p>Your one-stop destination for fashion and style!</p>
+    <img src="images/shop.jpg" alt="shop">
+  </header>
 
-  <!-- Products Section -->
-  <div class="section" id="products" style="display:none;">
-    <h2>Our Products</h2>
-    <div class="product">
-      <img src="shirt.webp" alt="Shirt">
-      <h3>Stylish Shirt</h3>
-      <p>Rs. 1000</p>
-    </div>
-    <div class="product">
-      <img src="shoes.jpg" alt="Shoes">
-      <h3>Running Shoes</h3>
-      <p>Rs. 2500</p>
-    </div>
-    <div class="product">
-      <img src="watch.jpg" alt="Watch">
-      <h3>Digital Watch</h3>
-      <p>Rs. 1800</p>
-    </div>
-  </div>
+  <!-- Categories -->
+  <section style="text-align:center; margin: 30px;">
+    <h2>Shop by Category</h2>
+    <button>All</button>
+    <button>Tops</button>
+    <button>Watches</button>
+    <button>Bags</button>
+  </section>
 
   <!-- About Section -->
-  <div class="section" id="about" style="display:none;">
-    <h2>About Us</h2>
-    <p>Karishma's Shop is a small online store started with passion. Our goal is to bring you trendy and affordable items with great quality.</p>
+ <section class="about">
+  <img src="images/shirts.webp" alt="karishma"/>
+  <div class="about-text">
+    <h1>👗 About Karishma's Shop</h1>
+    <p>Welcome to <strong>Karishma's Shop</strong> — your go-to place for cute and trendy fashion items! 💕</p>
+    <p>I’m Karishma, a web development learner 👩‍💻 and this shop is part of my journey. Every section here is made with passion and learning. 🌸</p>
+    <p>You’ll find stylish tops, sandals, earrings, bags, watches and more — all showcased with love! ✨</p>
+    <p>Thank you for supporting me. Your visit means a lot! 💖</p>
   </div>
+</section>
+
+
+  <!-- Product Section -->
+  <div class="container">
+    <h1>Our Products</h1>
+
+    <div class="product">
+      <img src="images/tops.jpg">
+      <h3>Girls Top</h3>
+      <p>Rs. 1200</p>
+      <div class="discount">-20%</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/sandel.jpg">
+      <h3>Sandal</h3>
+      <p>Rs. 1500</p>
+      <div class="discount">-30%</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Watch.webp">
+      <h3>Watch</h3>
+      <p>Rs. 1800</p>
+      <div class="discount">-10%</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/earing.jpg">
+      <h3>Earrings</h3>
+      <p>Rs. 700</p>
+      <div class="discount">-40%</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/handbag.webp">
+      <h3>Hand Bag</h3>
+      <p>Rs. 2200</p>
+      <div class="discount">-20%</div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/makup kit.jpeg">
+      <h3>Makeup Kit</h3>
+      <p>Rs. 4500</p>
+      <div class="discount">-15%</div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+ <!-- Blog Section -->
+<section style="padding: 50px; background-color: #f2f2f2;">
+  <h2 style="text-align: center; margin-bottom: 30px;">From Our Blog</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    
+    <div style="background-color: #fff; width: 300px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+      <img src="images/baby1.jpeg" alt="Fashion Tips" style="width: 100%; height: 180px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h3 style="margin: 0 0 10px;">Top 5 Fashion Tips in 2025</h3>
+        <p style="color: #555;">Discover how to stay trendy with these amazing fashion tips for the modern girl.</p>
+        <a href="#" style="color: #007BFF; text-decoration: none; font-weight: bold;">Read More →</a>
+      </div>
+    </div>
+
+    <div style="background-color: #fff; width: 300px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden;">
+      <img src="images/baby.jpg" alt="Summer Styles" style="width: 100%; height: 180px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h3 style="margin: 0 0 10px;">Best Summer Styles for Girls</h3>
+        <p style="color: #555;">Check out the coolest dresses, tops, and accessories for hot days!</p>
+        <a href="#" style="color: #007BFF; text-decoration: none; font-weight: bold;">Read More →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Contact Section -->
-  <div class="section" id="contact" style="display:none;">
-    <h2>Contact Us</h2>
-    <p>Email: karishmashop@example.com</p>
-    <p>Phone: +92 300 1234567</p>
-    <p>Instagram: @karishmashop</p>
+  <section class="contact-section">
+  <h2>📩 Contact Us</h2>
+  <p>If you have any questions, suggestions, or just want to say hello — we’d love to hear from you!</p>
+  
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+ <!-- Customer Testimonials Section -->
+<section style="background-color: #fdfdfd; padding: 40px 20px; text-align: center;">
+  <h2 style="font-size: 28px; margin-bottom: 30px;">What Our Customers Say</h2>
+
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto;">
+
+    <!-- Testimonial 1 -->
+    <div style="background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 250px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="user" style="width: 50px; border-radius: 50%;">
+      <p style="font-style: italic; margin: 15px 0;">"Loved the earrings! Great quality."</p>
+      <p style="font-weight: bold; color: #555;">- Chandni</p>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div style="background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 250px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="user" style="width: 50px; border-radius: 50%;">
+      <p style="font-style: italic; margin: 15px 0;">"Fast delivery and awesome products!"</p>
+      <p style="font-weight: bold; color: #555;">- Kusum</p>
+    </div>
+
   </div>
+</section>
 
-  <footer>
-    &copy; 2025 Karishma's Shop. All rights reserved.
-  </footer>
+<!-- Newsletter Subscribe Section -->
+<section style="background-color: #f0f4f8; padding: 40px 20px; text-align: center;">
+  <h2 style="font-size: 26px; margin-bottom: 10px;">Subscribe to Our Newsletter</h2>
+  <p style="color: #555; margin-bottom: 25px;">Stay updated with our latest fashion trends and offers!</p>
 
-  <script>
-    function showSection(sectionId) {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("products").style.display = "none";
-      document.getElementById("about").style.display = "none";
-      document.getElementById("contact").style.display = "none";
-      document.getElementById(sectionId).style.display = "block";
-    }
-  </script>
+  <form style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; max-width: 500px; margin: 0 auto;">
+    <input type="email" placeholder="Enter your email" required
+      style="flex: 1; padding: 12px 15px; border-radius: 30px; border: 1px solid #ccc; min-width: 200px;">
+    <button type="submit"
+      style="padding: 12px 20px; border: none; border-radius: 30px; background-color: #ff4081; color: white; cursor: pointer; font-weight: bold;">
+      Subscribe
+    </button>
+  </form>
+</section>
+
+
+
+ <!-- Footer -->
+<footer style="background-color: #222; color: #fff; padding: 40px 20px; text-align: center; font-family: sans-serif;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="font-size: 24px; margin-bottom: 10px;">Karishma's Shop</h2>
+    <p style="font-size: 14px; color: #ccc;">Your one-stop destination for fashion and style!</p>
+
+    <div style="margin: 30px 0; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <a href="#" style="color: #aaa; text-decoration: none;">Home</a>
+      <a href="#" style="color: #aaa; text-decoration: none;">Shop</a>
+      <a href="#" style="color: #aaa; text-decoration: none;">About</a>
+      <a href="#" style="color: #aaa; text-decoration: none;">Contact</a>
+      <a href="#" style="color: #aaa; text-decoration: none;">Blog</a>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <p style="color: #aaa;">© 2025 Karishma's Shop | All rights reserved</p>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <a href="#" title="Facebook" style="margin: 0 10px; color: #ccc; font-size: 20px;">🔵</a>
+      <a href="#" title="Instagram" style="margin: 0 10px; color: #ccc; font-size: 20px;">📸</a>
+      <a href="#" title="Twitter" style="margin: 0 10px; color: #ccc; font-size: 20px;">🐦</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Chat Button -->
+  <div style="position:fixed; bottom:20px; right:20px;">
+    <button style="background-color:#28a745; color:white; padding:15px; border-radius:50%; border:none;">💬</button>
+  </div>
 
 </body>
 </html>
